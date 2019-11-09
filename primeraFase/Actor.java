@@ -1,5 +1,6 @@
 package primeraFase;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 
@@ -29,6 +30,12 @@ public class Actor {
 	public Pelicula[] obtenerPeliculasDelActor(){
 		Collection<Pelicula> values = listaPeliculas.values();
 		Pelicula[] targetArray = values.toArray(new Pelicula[values.size()]);
+		return targetArray;
+
+	}
+	public ArrayList<String> obtenerNombrePeliculasDelActor(){
+		Collection<String> values = listaPeliculas.keySet();
+		ArrayList<String> targetArray = new ArrayList<String>(values);
 		return targetArray;
 
 	}

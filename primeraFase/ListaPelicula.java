@@ -3,14 +3,7 @@ package primeraFase;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Scanner;
-
-import segundaFase.UnorderedDoubleLinkedList;
+import java.util.*;
 
 public class ListaPelicula<T> {
 	private static ListaPelicula miLista = new ListaPelicula();
@@ -30,10 +23,6 @@ public class ListaPelicula<T> {
 		}else{
 			return null;
 		}
-	}
-
-	public int numPeliculas() {
-		return listaPelicula.size();
 	}
 
 	public void insertarPelicula(Pelicula pelip) {
@@ -126,6 +115,12 @@ public class ListaPelicula<T> {
 	}
 	public boolean estaPeli(String peli) {
 		return listaPelicula.containsKey(peli);
+	}
+
+	public Pelicula[] obtenerPeliculas(){
+		Collection<Pelicula> values = listaPelicula.values();
+		Pelicula[] targetArray = values.toArray(new Pelicula[values.size()]);
+		return targetArray;
 	}
 
 }

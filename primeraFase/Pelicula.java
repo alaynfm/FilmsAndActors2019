@@ -1,5 +1,6 @@
 package primeraFase;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 
@@ -32,6 +33,12 @@ public class Pelicula {
 		Collection<Actor> values = actores.values();
 		Actor[] targetArray = values.toArray(new Actor[values.size()]);
 		return targetArray;
+	}
+	public ArrayList<String> obtenerNombreActoresPeliculas(){
+		Collection<String> values = actores.keySet();
+		ArrayList<String> targetArray = new ArrayList<String>(values);
+		return targetArray;
+
 	}
 	public boolean tieneActor(Actor actor) {
 		return actores.containsKey(actor.getNombre());

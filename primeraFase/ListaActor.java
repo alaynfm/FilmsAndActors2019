@@ -54,7 +54,7 @@ public class ListaActor <T>{
 	 * 
 	 */
 
-	private Actor[] obtenerArrayActores() {
+	public Actor[] obtenerArrayActores() {
 
 		Collection<Actor> values = listaActores.values();
 		Actor[] targetArray = values.toArray(new Actor[values.size()]);

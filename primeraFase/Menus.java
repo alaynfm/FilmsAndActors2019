@@ -1,5 +1,7 @@
 package primeraFase;
 
+import terceraFase.GraphHash;
+
 import java.util.Scanner;
 
 public class Menus<T> {
@@ -13,6 +15,7 @@ public class Menus<T> {
 	public void ejecutarMenu() {
 		
 		String datos;
+		GraphHash g = new GraphHash();
 		int opcion;
 		boolean salir = false;
 		ListaPelicula listaP = ListaPelicula.getListaPelicula();
@@ -20,7 +23,7 @@ public class Menus<T> {
 
 		Scanner sc = new Scanner(System.in);
 		StopWatch timer1 = new StopWatch();
-		ListaPelicula.getListaPelicula().cargarDatos("films2.txt");
+		ListaPelicula.getListaPelicula().cargarDatos("FilmsActors20162017.txt");
 		System.out.println("Ha tardado " + timer1.elapsedTime() + " segundos en cargar los ficheros");
 
 		while (!salir) {
