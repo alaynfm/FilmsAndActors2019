@@ -15,6 +15,7 @@ public class Menus<T> {
 	public void ejecutarMenu() {
 		
 		String datos;
+		boolean grafoCreado = false;
 		GraphHash g = new GraphHash();
 		int opcion;
 		boolean salir = false;
@@ -38,7 +39,12 @@ public class Menus<T> {
 				System.out.println("| 6. Buscar Pelicula                |");
 				System.out.println("| 7. Incrementar dinero Pelicula    |");
 				System.out.println("| 8. Obtener Actores Pelicula       |");
-				System.out.println("| 9. Guardar datos y salir          |");
+				System.out.println("| 9. Crear grafo                    |");
+				System.out.println("| 10. Estan conectados              |");
+				System.out.println("| 11. Guardar datos y salir         |");
+
+
+
 				System.out.println("-------------------------------------");
 
 				System.out.println("Escribe una opcion en forma de numero");
@@ -94,6 +100,7 @@ public class Menus<T> {
 					System.out.println("|Escribe el nombre de un Actor a insertar :             |");
 					System.out.print("---------------------------------------------------------   ");
 
+					grafoCreado = false;
 					datos = sc.nextLine();
 					StopWatch timer4 = new StopWatch();
 					ListaActor.getMiLista().insertarActor(new Actor(datos));
@@ -101,6 +108,7 @@ public class Menus<T> {
 					System.out.println("Ha tardado en insertar el actor: " + timer4.elapsedTime());
 					System.out.println(" ");
 					System.out.println("Pulsa intro para continuar");
+
 					sc.nextLine();
 					break;
 				case 4:
@@ -119,7 +127,7 @@ public class Menus<T> {
 					break;
 				case 5:
 					System.out.println("---------------------------------------------------------");
-					System.out.println("| Borrar actor de una lista                             |");
+					System.out.println("| Borrar actor de una Pelicula                           |");
 					System.out.println("|                                                       |");
 					System.out.println("|Borraremos un actor en la lista                        |");
 					System.out.println("|Si no esta, no haremos nada                            |");
@@ -205,13 +213,58 @@ public class Menus<T> {
 					break;
 				case 9:
 					System.out.println("------------------------------------------------------------");
+					System.out.println("| Crear Grafo                                              |");
+					System.out.println("| creamoos el grafo con la lista de actores y peliculas    |");
+					System.out.println("------------------------------------------------------------");
+					StopWatch timer9 = new StopWatch();
+					g.crearGrafo();
+					System.out.println("Ha tardado " + timer9.elapsedTime() + " segundos");
+					System.out.println("Pulsa intro para Finalizar el programa");
+					sc.nextLine();
+					break;
+
+				case 10:
+					boolean bucle  = false;
+					while(!bucle) {
+						if (grafoCreado) {
+							System.out.println("------------------------------------------------------------");
+							System.out.println("| Estan conectados                                              |");
+							System.out.println("| devolvera True si estan conectados y false en caso contrario  |");
+							System.out.println("------------------------------------------------------------");
+							System.out.print("Introduca el nombre del primer Actor:");
+							String a1 = sc.nextLine();
+							System.out.print("Introduca el nombre del segundo Actor:");
+							String a2 = sc.nextLine();
+							StopWatch timer10 = new StopWatch();
+							System.out.println(g.estanConectados(a1, a2));
+							System.out.println("Ha tardado " + timer10.elapsedTime() + " segundos");
+							System.out.println("Pulsa intro para Finalizar el programa");
+							sc.nextLine();
+							bucle = true;
+						} else {
+							System.out.println("------------------------------------------------------------");
+							System.out.println("| Crear Grafo                                              |");
+							System.out.println("| creamoos el grafo con la lista de actores y peliculas    |");
+							System.out.println("------------------------------------------------------------");
+							StopWatch timer101 = new StopWatch();
+							g.crearGrafo();
+							grafoCreado = true;
+							System.out.println("Ha tardado " + timer101.elapsedTime() + " segundos");
+							System.out.println("Pulsa intro para continuar");
+							sc.nextLine();
+						}
+					}
+					break;
+
+				case 11:
+					System.out.println("------------------------------------------------------------");
 					System.out.println("| Guardar datos y salir                                    |");
 					System.out.println("| Guardamos actores en el archivo de Actores.txt           |");
 					System.out.println("| creamos una base de datos como la proporcionada          |");
 					System.out.println("------------------------------------------------------------");
-					StopWatch timer9 = new StopWatch();
+					StopWatch timer11 = new StopWatch();
 					ListaPelicula.getListaPelicula().guardarDatos();
-					System.out.println("Ha tardado " + timer9.elapsedTime() + " segundos");
+					System.out.println("Ha tardado " + timer11.elapsedTime() + " segundos");
 					salir = true;
 					System.out.println("Pulsa intro para Finalizar el programa");
 					sc.nextLine();
