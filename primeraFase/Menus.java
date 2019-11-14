@@ -2,6 +2,8 @@ package primeraFase;
 
 import terceraFase.GraphHash;
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class Menus<T> {
@@ -19,8 +21,7 @@ public class Menus<T> {
 		GraphHash g = new GraphHash();
 		int opcion;
 		boolean salir = false;
-		ListaPelicula listaP = ListaPelicula.getListaPelicula();
-		ListaActor listaA = ListaActor.getMiLista();
+		g.inicializarArray();
 
 		Scanner sc = new Scanner(System.in);
 		StopWatch timer1 = new StopWatch();
@@ -40,11 +41,10 @@ public class Menus<T> {
 				System.out.println("| 7. Incrementar dinero Pelicula    |");
 				System.out.println("| 8. Obtener Actores Pelicula       |");
 				System.out.println("| 9. Crear grafo                    |");
-				System.out.println("| 10. Estan conectados              |");
-				System.out.println("| 11. Guardar datos y salir         |");
-
-
-
+				System.out.println("| 10. Recorrido por Anchura         |");
+				System.out.println("| 11. Recorrido en Profundidad      |");
+				System.out.println("| 12. Mostrar Grafo                 |");
+				System.out.println("| 13. Guardar datos y salir         |");
 				System.out.println("-------------------------------------");
 
 				System.out.println("Escribe una opcion en forma de numero");
@@ -218,29 +218,85 @@ public class Menus<T> {
 					System.out.println("------------------------------------------------------------");
 					StopWatch timer9 = new StopWatch();
 					g.crearGrafo();
+					grafoCreado = true;
 					System.out.println("Ha tardado " + timer9.elapsedTime() + " segundos");
 					System.out.println("Pulsa intro para Finalizar el programa");
 					sc.nextLine();
 					break;
 
 				case 10:
-					boolean bucle  = false;
-					while(!bucle) {
+						boolean bucle  = false;
+						while(!bucle) {
+							if (grafoCreado) {
+								System.out.println("------------------------------------------------------------");
+								System.out.println("| Recorrido por Anchura                                     |");
+								System.out.println("| Si existe un recorrido lo mostrara                        |");
+								System.out.println("------------------------------------------------------------");
+								System.out.print("Introduca el nombre del primer Actor:");
+								String a1 = sc.nextLine();
+								System.out.print("Introduca el nombre del segundo Actor:");
+								String a2 = sc.nextLine();
+								StopWatch timer10 = new StopWatch();
+								ArrayList<String> camino = g.recorridoEnAnchura(a1, a2);
+								Iterator ipm = camino.iterator();
+								System.out.println("");
+								if(!camino.isEmpty()) {
+									while (ipm.hasNext()) {
+										System.out.print(ipm.next() + "  &  ");
+									}
+									System.out.println();
+									System.out.println("");
+								}else{
+									System.out.println("Lo sentimos pero los dos actores no tienen relación");
+
+								}
+								System.out.println("Ha tardado " + timer10.elapsedTime() + " segundos");
+								System.out.println("Pulsa intro para Finalizar el programa");
+								sc.nextLine();
+								bucle = true;
+							} else {
+								System.out.println("------------------------------------------------------------");
+								System.out.println("| Crear Grafo                                              |");
+								System.out.println("| creamoos el grafo con la lista de actores y peliculas    |");
+								System.out.println("------------------------------------------------------------");
+								StopWatch timer101 = new StopWatch();
+								g.crearGrafo();
+								grafoCreado = true;
+								System.out.println("Ha tardado " + timer101.elapsedTime() + " segundos");
+								System.out.println("Pulsa intro para continuar");
+								sc.nextLine();
+							}
+						}
+						break;
+				case 11:
+					boolean bucle2  = false;
+					while(!bucle2) {
 						if (grafoCreado) {
 							System.out.println("------------------------------------------------------------");
-							System.out.println("| Estan conectados                                              |");
-							System.out.println("| devolvera True si estan conectados y false en caso contrario  |");
+							System.out.println("| Recorrido en Profundidad                                  |");
+							System.out.println("| Si existe un recorrido lo mostrara                        |");
 							System.out.println("------------------------------------------------------------");
 							System.out.print("Introduca el nombre del primer Actor:");
 							String a1 = sc.nextLine();
 							System.out.print("Introduca el nombre del segundo Actor:");
 							String a2 = sc.nextLine();
-							StopWatch timer10 = new StopWatch();
-							System.out.println(g.estanConectados(a1, a2));
-							System.out.println("Ha tardado " + timer10.elapsedTime() + " segundos");
+							StopWatch timer11 = new StopWatch();
+							ArrayList<String> camino = g.recorridoEnProfundidad(a1, a2);
+							Iterator ipm = camino.iterator();
+							System.out.println("");
+							if(!camino.isEmpty()) {
+								while (ipm.hasNext()) {
+									System.out.print(ipm.next() + "  &  ");
+								}
+								System.out.println();
+								System.out.println("");
+							}else{
+								System.out.println("Lo sentimos pero los dos actores no tienen relación");
+								}
+							System.out.println("Ha tardado " + timer11.elapsedTime() + " segundos");
 							System.out.println("Pulsa intro para Finalizar el programa");
 							sc.nextLine();
-							bucle = true;
+							bucle2 = true;
 						} else {
 							System.out.println("------------------------------------------------------------");
 							System.out.println("| Crear Grafo                                              |");
@@ -256,7 +312,18 @@ public class Menus<T> {
 					}
 					break;
 
-				case 11:
+				case 12:
+					System.out.println("------------------------------------------------------------");
+					System.out.println("| Imprimir grafo                                            |");
+					System.out.println("------------------------------------------------------------");
+					if(g.isEmpty()){
+					    System.out.println("El grafo esta vacio");
+                    }else {
+                        g.print();
+                    }
+					break;
+
+				case 13:
 					System.out.println("------------------------------------------------------------");
 					System.out.println("| Guardar datos y salir                                    |");
 					System.out.println("| Guardamos actores en el archivo de Actores.txt           |");

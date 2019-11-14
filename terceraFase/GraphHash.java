@@ -7,7 +7,8 @@ import primeraFase.Pelicula;
 
 import java.util.*;
 
-public class GraphHash {
+public class GraphHash<T>{
+
     HashMap<String, ArrayList<String>> g;
 
     public GraphHash(){
@@ -49,8 +50,6 @@ public class GraphHash {
                     peliculas.add("P" + ifm.next());
                 }
                 g.put(actor,peliculas);
-
-
             }
         }catch(Exception h ) {
             System.out.println("La pelicula no esta en la base de datos");
@@ -66,34 +65,128 @@ public class GraphHash {
             System.out.println();
         }
     }
-    public boolean estanConectados(String a1, String a2){
+    public ArrayList<String> recorridoEnProfundidad(String a1, String a2){
 
+        ArrayList<String> camino = new ArrayList<String>();
         boolean esta = false;
         String n1 = "A" +a1;
         String n2 = "A" + a2;
 
         if(g.containsKey(n1) & g.containsKey(n2)){
+
             Stack<String> porExaminar = new Stack<String>();
             HashSet<String> examinados = new HashSet<String>();
             porExaminar.push(n1);
+            HashMap<String,String> recorrido = new HashMap<String, String>();//La clave es el destino
 
             while(!porExaminar.isEmpty() & !esta) {
                 String elementoAExamninar = porExaminar.pop();
+
                 if (!examinados.contains(elementoAExamninar)) {
                     examinados.add(elementoAExamninar);
+
                     if (elementoAExamninar.equals(n2)) {
                         esta = true;
                     } else {
                         ArrayList<String> meterPila = g.get(elementoAExamninar);
                         Iterator<String> itr = meterPila.iterator();
                         while (itr.hasNext()) {
-                            porExaminar.push(itr.next());
+                            String element = itr.next();
+                            if(!examinados.contains(element)) {
+                                porExaminar.push(element);
+                                recorrido.put(element,elementoAExamninar);
+                            }
                         }
+                    }
+                }
+            }
+            if(esta) {
+                boolean salir2 = false;
+                camino.add(n2);
+                String elementoR = n2;
+
+                while (!salir2) {
+                    if (n1.equals(elementoR)) {
+                        salir2 = true;
+                    } else {
+                        elementoR = recorrido.get(elementoR);
+                        camino.add(elementoR);
                     }
                 }
             }
 
         }
-        return esta;
+        return camino;
+    }
+    public ArrayList<String> recorridoEnAnchura(String a1,String a2){
+
+        ArrayList<String> camino = new ArrayList<String>();
+        boolean esta = false;
+        String n1 = "A" +a1;
+        String n2 = "A" + a2;
+
+        if(g.containsKey(n1) & g.containsKey(n2)){
+
+            Queue<String> porExaminar = new LinkedList<String>();
+            HashSet<String> examinados = new HashSet<String>();
+            porExaminar.add(n1);
+            HashMap<String,String> recorrido = new HashMap<String, String>();//La clave es el destino
+
+            while(!porExaminar.isEmpty() & !esta) {
+                String elementoAExamninar = porExaminar.poll();
+
+                if (!examinados.contains(elementoAExamninar)) {
+
+                    examinados.add(elementoAExamninar);
+
+                    if (elementoAExamninar.equals(n2)) {
+                        esta = true;
+                    } else {
+                        ArrayList<String> meterPila = g.get(elementoAExamninar);
+                        Iterator<String> itr = meterPila.iterator();
+                        while (itr.hasNext()) {
+                            String element = itr.next();
+                            if(!examinados.contains(element)) {
+                                porExaminar.add(element);
+                                recorrido.put(element,elementoAExamninar);
+                            }
+                        }
+                    }
+                }
+            }
+
+            if(esta) {
+                boolean salir2 = false;
+                camino.add(n2);
+                String elementoR = n2;
+
+                while (!salir2) {
+                    if (n1.equals(elementoR)) {
+                        salir2 = true;
+                    } else {
+                        elementoR = recorrido.get(elementoR);
+                        camino.add(elementoR);
+                    }
+                }
+            }
+
+        }
+
+        return camino;
+    }
+    public boolean isEmpty(){
+        return g.isEmpty();
+    }
+    public void inicializarArray(){
+        Stack<Boolean> [] array =new Stack[10];
+        int a  = array.length;
+        for (int i= 0 ; i<array.length;i++) {
+            Stack<Boolean> pila = new Stack<Boolean>();
+            pila.push(false);
+            array[i] = pila;
+
+        }
+        int a2 = 0;
+
     }
 }
