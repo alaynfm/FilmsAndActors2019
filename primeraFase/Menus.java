@@ -21,11 +21,10 @@ public class Menus<T> {
 		GraphHash g = new GraphHash();
 		int opcion;
 		boolean salir = false;
-		g.inicializarArray();
 
 		Scanner sc = new Scanner(System.in);
 		StopWatch timer1 = new StopWatch();
-		ListaPelicula.getListaPelicula().cargarDatos("FilmsActors20162017.txt");
+		ListaPelicula.getListaPelicula().cargarDatos("films2.txt");
 		System.out.println("Ha tardado " + timer1.elapsedTime() + " segundos en cargar los ficheros");
 
 		while (!salir) {

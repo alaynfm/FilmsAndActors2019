@@ -44,21 +44,23 @@ public class ListaPelicula<T> {
 			while (input.hasNextLine()) {
 				String line = input.nextLine();
 				String[] v1 = line.split("\\s+--->\\s+");
-				String[] v2 = v1[1].split("\\s+&&&\\s+");
-
 				if(!ListaPelicula.getListaPelicula().estaPeli(v1[0])) {
 					Pelicula pelicula = new Pelicula(v1[0]);
 					ListaPelicula.getListaPelicula().insertarPelicula(pelicula);
 				}
 				Pelicula pelip = ListaPelicula.getListaPelicula().getPelicula(v1[0]);
-				for (int i = 0; i < v2.length; i++) {
-					if(!ListaActor.getMiLista().estaActor(v2[i])) {
-						Actor actor = new Actor(v2[i]);
-						ListaActor.getMiLista().insertarActor(actor);
+
+				if(v1.length>=2) {
+					String[] v2 = v1[1].split("\\s+&&&\\s+");
+					for (int i = 0; i < v2.length; i++) {
+						if(!ListaActor.getMiLista().estaActor(v2[i])) {
+							Actor actor = new Actor(v2[i]);
+							ListaActor.getMiLista().insertarActor(actor);
+						}
+						Actor a2 = ListaActor.getMiLista().getActor(v2[i]);
+						pelip.insertarActor(a2);
+						a2.insertarPelicula(pelip);
 					}
-					Actor a2 = ListaActor.getMiLista().getActor(v2[i]);
-					pelip.insertarActor(a2);
-					a2.insertarPelicula(pelip);
 				}
 			}
 			input.close();

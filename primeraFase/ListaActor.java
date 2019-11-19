@@ -1,5 +1,7 @@
 package primeraFase;
 
+import packSortAndSearch.QuickSort;
+
 import java.io.FileWriter;
 import java.io.PrintWriter;
 
@@ -58,7 +60,7 @@ public class ListaActor <T>{
 
 		Collection<Actor> values = listaActores.values();
 		Actor[] targetArray = values.toArray(new Actor[values.size()]);
-		Ordenar ordenar = new Ordenar();
+		QuickSort ordenar = new QuickSort();
 		ordenar.quickSort(targetArray, 0, targetArray.length - 1);
 		return targetArray;
 	}

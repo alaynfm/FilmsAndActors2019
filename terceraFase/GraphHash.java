@@ -18,7 +18,6 @@ public class GraphHash<T>{
     public void crearGrafo() {
         // Post: crea el grafo desde la lista de actores
         // Los nodos son nombres de actores y títulos de películasç
-
         //Recorremos todas las peliculas
         try {
             Pelicula[] listaPeliculas = ListaPelicula.getListaPelicula().obtenerPeliculas(); //HashMap<String,Pelicula>
@@ -46,6 +45,7 @@ public class GraphHash<T>{
                 ArrayList<String> peliculasMal = listaActores[a].obtenerNombrePeliculasDelActor();
                 Iterator<String> ifm = peliculasMal.iterator();
                 ArrayList<String> peliculas = new ArrayList<String>();
+
                 while (ifm.hasNext()) {
                     peliculas.add("P" + ifm.next());
                 }
@@ -141,6 +141,7 @@ public class GraphHash<T>{
 
                     if (elementoAExamninar.equals(n2)) {
                         esta = true;
+
                     } else {
                         ArrayList<String> meterPila = g.get(elementoAExamninar);
                         Iterator<String> itr = meterPila.iterator();
@@ -177,16 +178,5 @@ public class GraphHash<T>{
     public boolean isEmpty(){
         return g.isEmpty();
     }
-    public void inicializarArray(){
-        Stack<Boolean> [] array =new Stack[10];
-        int a  = array.length;
-        for (int i= 0 ; i<array.length;i++) {
-            Stack<Boolean> pila = new Stack<Boolean>();
-            pila.push(false);
-            array[i] = pila;
 
-        }
-        int a2 = 0;
-
-    }
 }
