@@ -1,6 +1,7 @@
 package primeraFase;
 
 import terceraFase.GraphHash;
+import terceraFase.Par;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -46,6 +47,7 @@ public class Menus<T> {
 				System.out.println("| 13. Guardar datos y salir         |");
 				System.out.println("                                     ");
 				System.out.println("| 14. CALCULAR PAGERANK             |");
+				System.out.println("| 15. Obtener Par Peliculas/Actores |");
 				System.out.println("-------------------------------------");
 
 				System.out.println("Escribe una opcion en forma de numero");
@@ -282,18 +284,7 @@ public class Menus<T> {
 							System.out.print("Introduca el nombre del segundo Actor:");
 							String a2 = sc.nextLine();
 							StopWatch timer11 = new StopWatch();
-							ArrayList<String> camino = g.recorridoEnProfundidad(a1, a2);
-							Iterator ipm = camino.iterator();
-							System.out.println("");
-							if(!camino.isEmpty()) {
-								while (ipm.hasNext()) {
-									System.out.print(ipm.next() + "  &  ");
-								}
-								System.out.println();
-								System.out.println("");
-							}else{
-								System.out.println("Lo sentimos pero los dos actores no tienen relación");
-								}
+							System.out.println(g.recorridoEnProfundidad(a1,a2));
 							System.out.println("Ha tardado " + timer11.elapsedTime() + " segundos");
 							System.out.println("Pulsa intro para Finalizar el programa");
 							sc.nextLine();
@@ -344,14 +335,28 @@ public class Menus<T> {
 					StopWatch timer14 = new StopWatch();
 					if (!grafoCreado) {
 						g.crearGrafo();
+						grafoCreado=true;
 					}
-					g.buscar("PDakota Bastard");
 					System.out.println("Ha tardado " + timer14.elapsedTime() + " segundos");
-					salir = true;
+					System.out.println("Pulsa intro para continuar el programa");
+					sc.nextLine();
+					break;
+				case 15:
+					System.out.println("------------------------------------------------------------");
+					System.out.println("| Par Pelicula/Actor                                        |");
+					System.out.println("| Mostrara una lista de Actores o Peliculas                 |");
+					System.out.println("| Ordenadas mayor a menor por el pagerank                   |");
+					System.out.println("------------------------------------------------------------");
+					System.out.print("Introduca el nombre del Actor/Pelicula:");
+					String a1 = sc.nextLine();
+					StopWatch timer15 = new StopWatch();
+					Par[] lista = g.buscar(a1);
+					System.out.println("Ha tardado " + timer15.elapsedTime() + " segundos");
+					for(int i = 0; i<lista.length;i++) System.out.println(lista[i].nombre() + "" + lista[i].valor());
+					System.out.println();
 					System.out.println("Pulsa intro para Finalizar el programa");
 					sc.nextLine();
 					break;
-
 				}
 
 			} catch (Exception e) {

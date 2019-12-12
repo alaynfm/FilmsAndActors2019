@@ -8,7 +8,8 @@ public class Par {
         nombreAP = nom;
         valor=va;
     }
-
+    public String nombre() {return nombreAP;}
+    public double valor(){return valor;}
     public int compareTo(Par v){
         if(valor > v.valor) return 1;
         else if(valor < v.valor) return -1;

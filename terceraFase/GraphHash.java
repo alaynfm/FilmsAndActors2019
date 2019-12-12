@@ -82,7 +82,7 @@ public class GraphHash<T>{
             System.out.println();
         }
     }
-    public ArrayList<String> recorridoEnProfundidad(String a1, String a2){
+    public boolean recorridoEnProfundidad(String a1, String a2){
 
         ArrayList<String> camino = new ArrayList<String>();
         boolean esta = false;
@@ -117,23 +117,8 @@ public class GraphHash<T>{
                     }
                 }
             }
-            if(esta) {
-                boolean salir2 = false;
-                camino.add(n2);
-                String elementoR = n2;
-
-                while (!salir2) {
-                    if (n1.equals(elementoR)) {
-                        salir2 = true;
-                    } else {
-                        elementoR = recorrido.get(elementoR);
-                        camino.add(elementoR);
-                    }
-                }
-            }
-
         }
-        return camino;
+        return esta;
     }
     public ArrayList<String> recorridoEnAnchura(String a1,String a2){
 
