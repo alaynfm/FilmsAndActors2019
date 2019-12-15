@@ -25,7 +25,7 @@ public class Menus<T> {
 
 		Scanner sc = new Scanner(System.in);
 		StopWatch timer1 = new StopWatch();
-		ListaPelicula.getListaPelicula().cargarDatos("FilmsActors20162017.txt");
+		ListaPelicula.getListaPelicula().cargarDatos("films2.txt");
 		System.out.println("Ha tardado " + timer1.elapsedTime() + " segundos en cargar los ficheros");
 
 		while (!salir) {
@@ -337,6 +337,7 @@ public class Menus<T> {
 						g.crearGrafo();
 						grafoCreado=true;
 					}
+					g.pageRannk();
 					System.out.println("Ha tardado " + timer14.elapsedTime() + " segundos");
 					System.out.println("Pulsa intro para continuar el programa");
 					sc.nextLine();
@@ -352,7 +353,7 @@ public class Menus<T> {
 					StopWatch timer15 = new StopWatch();
 					Par[] lista = g.buscar(a1);
 					System.out.println("Ha tardado " + timer15.elapsedTime() + " segundos");
-					for(int i = 0; i<lista.length;i++) System.out.println(lista[i].nombre() + "" + lista[i].valor());
+					for(int i = 0; i<lista.length;i++) System.out.println(lista[i].nombre() + "   " + lista[i].valor());
 					System.out.println();
 					System.out.println("Pulsa intro para Finalizar el programa");
 					sc.nextLine();

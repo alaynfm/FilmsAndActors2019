@@ -199,7 +199,7 @@ public class GraphHash<T>{
                 for (String element : data) {
                     value = value + (pagerank.get(element) /g.get(element).size());
                 }
-                Double valorN = (((1-0.85)/valor)+0.85) * value;
+                Double valorN = (((1-0.85)/valor))+(0.85 * value);
                 iteracion.put(entry.getKey(),valorN);
                 valorF = valorF + Math.abs(pagerank.get(entry.getKey()) - iteracion.get(entry.getKey()));
 
@@ -220,8 +220,11 @@ public class GraphHash<T>{
     }
 
     public Par[] buscar (String nombre){
-        pageRannk();
-        ArrayList<String> lista = g.get(nombre);
+        String buscar = null;
+        if(ListaPelicula.getListaPelicula().estaPeli(nombre)){
+            buscar = "P" + nombre;
+        }else buscar="A" + nombre;
+        ArrayList<String> lista = g.get(buscar);
         Par[] listaP = new Par[lista.size()];
         for(int i = 0; i<lista.size();i++){
             Par par = new Par(lista.get(i),pagerank.get(lista.get(i)));
