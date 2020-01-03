@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fbe7d4cc-1dac-4847-a65d-fd5266b26f3d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/sort/Ordenar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/terceraFase/Par.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primeraFase/Actor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primeraFase/Actor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primeraFase/ListaActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primeraFase/ListaActor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primeraFase/ListaPelicula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primeraFase/ListaPelicula.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primeraFase/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primeraFase/Menus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primeraFase/Menus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primeraFase/Ordenar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primeraFase/Pelicula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primeraFase/Pelicula.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/segundaFase/DoubleLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/segundaFase/DoubleLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/segundaFase/PruebaDoubleLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/segundaFase/PruebaDoubleLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/terceraFase/GraphHash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/terceraFase/GraphHash.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/src" />
+  </component>
+  <component name="ProjectId" id="1TL3ZtDWeSzDl0m304QGCCkvrpd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/sort" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\alain\IdeaProjects\eda\src\sort" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alain\IdeaProjects\examenEda\src" />
+      <recent name="C:\Users\alain\IdeaProjects\examenEda\reccursivo" />
+      <recent name="C:\Users\alain\IdeaProjects\eda" />
+      <recent name="C:\Users\alain\IdeaProjects\examenEda" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="EvaluacionExpresionAritmetica2017" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ejerciciosClase.EvaluacionExpresionAritmetica2017" />
+      <module name="examenEda" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="eda" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Maze3D" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="maze.Maze3D" />
+      <module name="examenEda" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="maze.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Pilas" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pruebasVarias.Pilas" />
+      <module name="examenEda" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pruebasVarias.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TeamQueue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cafeteria.TeamQueue" />
+      <module name="examenEda" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cafeteria.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Maze3D" />
+        <item itemvalue="Application.EvaluacionExpresionAritmetica2017" />
+        <item itemvalue="Application.TeamQueue" />
+        <item itemvalue="Application.Pilas" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fbe7d4cc-1dac-4847-a65d-fd5266b26f3d" name="Default Changelist" comment="" />
+      <created>1573225606092</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573225606092</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="581" height="861" key="GridCell.Tab.0.bottom" timestamp="1578043010656">
+      <screen x="0" y="0" width="1739" height="939" />
+    </state>
+    <state width="581" height="861" key="GridCell.Tab.0.bottom/0.0.1739.939@0.0.1739.939" timestamp="1578043010656" />
+    <state width="581" height="861" key="GridCell.Tab.0.center" timestamp="1578043010656">
+      <screen x="0" y="0" width="1739" height="939" />
+    </state>
+    <state width="581" height="861" key="GridCell.Tab.0.center/0.0.1739.939@0.0.1739.939" timestamp="1578043010656" />
+    <state width="581" height="861" key="GridCell.Tab.0.left" timestamp="1578043010656">
+      <screen x="0" y="0" width="1739" height="939" />
+    </state>
+    <state width="581" height="861" key="GridCell.Tab.0.left/0.0.1739.939@0.0.1739.939" timestamp="1578043010656" />
+    <state width="581" height="861" key="GridCell.Tab.0.right" timestamp="1578043010656">
+      <screen x="0" y="0" width="1739" height="939" />
+    </state>
+    <state width="581" height="861" key="GridCell.Tab.0.right/0.0.1739.939@0.0.1739.939" timestamp="1578043010656" />
+    <state width="1696" height="247" key="GridCell.Tab.1.bottom" timestamp="1575321946127">
+      <screen x="0" y="0" width="1739" height="939" />
+    </state>
+    <state width="1696" height="247" key="GridCell.Tab.1.bottom/0.0.1739.939@0.0.1739.939" timestamp="1575321946127" />
+    <state width="1696" height="247" key="GridCell.Tab.1.center" timestamp="1575321946127">
+      <screen x="0" y="0" width="1739" height="939" />
+    </state>
+    <state width="1696" height="247" key="GridCell.Tab.1.center/0.0.1739.939@0.0.1739.939" timestamp="1575321946127" />
+    <state width="1696" height="247" key="GridCell.Tab.1.left" timestamp="1575321946127">
+      <screen x="0" y="0" width="1739" height="939" />
+    </state>
+    <state width="1696" height="247" key="GridCell.Tab.1.left/0.0.1739.939@0.0.1739.939" timestamp="1575321946127" />
+    <state width="1696" height="247" key="GridCell.Tab.1.right" timestamp="1575321946127">
+      <screen x="0" y="0" width="1739" height="939" />
+    </state>
+    <state width="1696" height="247" key="GridCell.Tab.1.right/0.0.1739.939@0.0.1739.939" timestamp="1575321946127" />
+    <state x="566" y="293" key="com.intellij.ide.util.TipDialog" timestamp="1578042635794">
+      <screen x="0" y="0" width="1739" height="939" />
+    </state>
+    <state x="566" y="293" key="com.intellij.ide.util.TipDialog/0.0.1739.939/1920.0.1739.939@0.0.1739.939" timestamp="1575560714336" />
+    <state x="566" y="293" key="com.intellij.ide.util.TipDialog/0.0.1739.939@0.0.1739.939" timestamp="1578042635794" />
+    <state x="298" y="90" key="new project wizard" timestamp="1577784320463">
+      <screen x="0" y="0" width="1739" height="939" />
+    </state>
+    <state x="298" y="90" key="new project wizard/0.0.1739.939@0.0.1739.939" timestamp="1577784320463" />
+    <state x="532" y="200" width="672" height="678" key="search.everywhere.popup" timestamp="1577959961339">
+      <screen x="0" y="0" width="1739" height="939" />
+    </state>
+    <state x="532" y="200" width="672" height="678" key="search.everywhere.popup/0.0.1739.939/1920.0.1739.939@0.0.1739.939" timestamp="1577959961339" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/examenEda/src/pruebasVarias/PruebasQueue.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/examenEda/src/pruebasVarias/PruebasQueue.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/examenEda/src/pruebasVarias/PruebasQueue.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/examenEda/src/pruebasVarias/PruebasQueue.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/examenEda/src/cafeteria/Cafeteria.java</url>
+          <line>90</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/examenEda/src/maze/MazeMatrix.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/examenEda/src/maze/MazeMatrix.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/examenEda/src/maze/MazeMatrix.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/examenEda/src/parenthesesBalance/ParentheseBalance.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/examenEda/src/juegoBloques/Juego.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/examenEda/src/juegoBloques/Juego.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/examenEda/src/juegoBloques/Juego.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/primeraFase/ListaPelicula.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/examenEda/src/colegio/Colegio.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/examenEda/src/pruebasVarias/Pilas.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/examenEda/src/pruebasVarias/Pilas.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/examenEda/src/EvaluacionExpresionAritmetica2017.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/examenEda/src/maze/Maze3D.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/terceraFase/GraphHash.java</url>
+          <line>234</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="tablero[0]" />
+        <watch expression="tablero[4]" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
